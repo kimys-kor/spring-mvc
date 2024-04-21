@@ -10,16 +10,13 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesBindin
 public record JwtProperties(
         String secretKey,
         Long expirationTime,
-        String headerPrefix //변수명 리팩토링시 반드시 shift + f6
+        String headerString
+
 ) {
     public JwtProperties { // compact constructor
         // this -> null yet.
         if (expirationTime == null) {
             expirationTime = 1_200_000L;
         }
-        if (headerPrefix == null) {
-            headerPrefix = "Bearer";
-        }
     }
-
 }
