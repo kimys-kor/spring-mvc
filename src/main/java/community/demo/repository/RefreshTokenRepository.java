@@ -11,5 +11,5 @@ public interface RefreshTokenRepository extends JpaRepository<RefreshTokenEntity
     boolean existsByRefreshTokenAndUsername(String refreshToken, String username);
 
     @Transactional
-    void deleteByEmailEquals(@Param("username") String username);
+    void deleteByUsernameEquals(@Param("username") String username);
 }

@@ -29,7 +29,7 @@ public class RefreshTokenService {
                 .username(username)
                 .build();
 
-        refreshTokenRepository.deleteByEmailEquals(username);
+        refreshTokenRepository.deleteByUsernameEquals(username);
         refreshTokenRepository.save(tokenEntity);
     }
 
@@ -56,7 +56,7 @@ public class RefreshTokenService {
         return accessToken;
     }
 
-    public boolean existsByRefreshTokenAndEmail(String refreshToken, String username) {
+    public boolean existsByRefreshTokenAndUsername(String refreshToken, String username) {
         return refreshTokenRepository.existsByRefreshTokenAndUsername(refreshToken, username);
     }
 }

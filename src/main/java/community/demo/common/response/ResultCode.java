@@ -34,7 +34,7 @@ public enum ResultCode {
     USER_JOIN_EMPTY_PWD(HttpStatus.OK, "91000204", "비밀번호를 입력하여 주시기 바랍니다."),
     USER_JOIN_RESUBSCRIPTION_IS_NOT_VALID(HttpStatus.OK, "91000214", "탈퇴 후 재가입 유효기간이 아닙니다."),
     USER_JOIN_DUPLICATE_ACCOUNT(HttpStatus.OK, "91000215", "중복된 계정 입니다."),
-    USER_JOIN_EMAIL_NOT_AVAILABLE(HttpStatus.OK, "91000217", "사용할 수 없는 id 입니다."),
+    USER_JOIN_USERNAME_NOT_AVAILABLE(HttpStatus.OK, "91000217", "사용할 수 없는 id 입니다."),
     USER_JOIN_DUPLICATE_PHONENUMBER(HttpStatus.OK, "91000218", "중복된 핸드폰 번호 입니다."),
     USER_JOIN_PHONENUMBER_NOT_AVAILABLE(HttpStatus.OK, "91000219", "사용할 수 없는 핸드폰 번호 입니다."),
     USER_INFORMATION_IS_NOT_RIGHT(HttpStatus.OK, "91000221", "로그인정보가 옳바르지 않습니다."),
@@ -43,7 +43,7 @@ public enum ResultCode {
     USER_JOIN_DUPLICATE_NICKNAME(HttpStatus.OK, "91000224", "중복된 닉네임 입니다."),
     USER_JOIN_IS_NULL(HttpStatus.OK, "91000225", "닉네임을 입력하여 주시기 바랍니다."),
     USER_PHONENUM_NO_SEARCHED(HttpStatus.OK, "91000226", "가입되지 않은 휴대폰 번호입니다."),
-    USER_PHONENUM_EMAIL_NOT_MATCH(HttpStatus.OK, "91000227", "이메일과 폰번호가 일치하지 않습니다."),
+    USER_PHONENUM_USERNAME_NOT_MATCH(HttpStatus.OK, "91000227", "이메일과 폰번호가 일치하지 않습니다."),
 
     // 이벤트, 쿠폰 관련 910003XX
     EVENT_DUPLICATE(HttpStatus.OK, "91000301", "중복된 이벤트 참여입니다."),
