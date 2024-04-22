@@ -1,8 +1,8 @@
 package community.demo.service;
 
 
-import community.demo.common.exception.AuthenticationErrorCode;
-import community.demo.common.exception.AuthenticationException;
+import community.demo.common.exception.exceptions.AuthenticationErrorCode;
+import community.demo.common.exception.exceptions.AuthenticationException;
 import community.demo.common.jwt.JwtTokenProvider;
 import community.demo.model.RefreshTokenEntity;
 import community.demo.repository.RefreshTokenRepository;

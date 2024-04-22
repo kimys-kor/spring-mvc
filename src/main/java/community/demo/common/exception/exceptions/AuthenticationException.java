@@ -1,4 +1,4 @@
-package community.demo.common.exception;
+package community.demo.common.exception.exceptions;
 
 
 import community.demo.common.exception.inteface.CustomException;

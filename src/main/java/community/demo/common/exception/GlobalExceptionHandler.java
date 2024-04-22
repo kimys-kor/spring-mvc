@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.time.LocalDateTime;
 
 @Slf4j
+// exception이 발생하면 핸들링해서 가져온다
 @RestControllerAdvice
 public final class GlobalExceptionHandler {
 

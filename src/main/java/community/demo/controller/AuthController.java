@@ -52,12 +52,10 @@ public class AuthController {
             @RequestBody SignInRequestDto signInRequestDto,
             HttpServletResponse response
     ) {
-        Optional<User> user = signInUseCase.SignIn(signInRequestDto);
-        if (user.isEmpty()) {
-            return new Response(ResultCode.USER_NO_ID_SEARCHED);
-        }
+        User user = signInUseCase.SignIn(signInRequestDto);
+
         // access token 헤더 추가
-        String jwtToken = jwtTokenProvider.generateToken(user.get().getId(), user.get().getUsername());
+        String jwtToken = jwtTokenProvider.generateToken(user.getId(), user.getUsername());
         response.addHeader(jwtProperties.headerString(), "Bearer "+jwtToken);
 
         // refresh token 쿠키 추가
@@ -70,7 +68,7 @@ public class AuthController {
         response.addCookie(cookie);
 
 
-        refreshTokenService.save(user.get().getUsername(), refreshToken);
+        refreshTokenService.save(user.getUsername(), refreshToken);
 
         return new Response(ResultCode.DATA_NORMAL_PROCESSING);
     }
